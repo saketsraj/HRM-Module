@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HRM • Employee About</title>
+  <link rel="stylesheet" href="../styles/about.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+    <nav class="navbar">
+  <div class="nav-left">
+    <ul class="nav-links">
+      <li><a href="./dashboard.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./attendance.html">Attendance</a></li>
+      <li><a href="./leaves.html">Leaves</a></li>
+      <li><a href="./payslip.html">Payslips</a></li>
+      <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
+    </ul>
+  </div>
+      <div class="nav-right">
+        <div class="user-menu">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div class="dropdown" id="dropdownMenu">
+            <a href="../login-page.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <div class="topbar">
+      <span class="badge">Employee Portal • About</span>
+      <span class="pill">
+    </div>
+
+    <div class="card grid" role="region" aria-label="Employee About Details">
+      <!-- Left Column: Avatar + Name + Role -->
+      <aside class="profile" aria-label="Profile">
+        <figure class="avatar" aria-label="Profile photo">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=800&auto=format&fit=crop" alt="Profile photo of employee" />
+        </figure>
+        <div class="name" id="emp-name">Rahul Agarwal</div>
+        <div class="role" id="emp-role">Solution Engineer</div>
+        <div class="chips" aria-label="Quick tags">
+          <span class="chip">Full-time</span>
+          <span class="chip">Employee ID: EMP-1024</span>
+        </div>
+      </aside>
+
+      <!-- Right Column: Info -->
+      <section class="about">
+        <h2>About</h2>
+        <div class="info-grid" aria-describedby="about-fields">
+          <div class="label">Phone</div>
+          <div class="value"><a href="tel:+91-98765-43210" style="color:inherit; text-decoration:none">+91 98765 43210</a></div>
+
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:rahul@example.com" style="color:inherit; text-decoration:none">rahul@example.com</a></div>
+
+          <div class="label">Location</div>
+          <div class="value">Hyderabad, India</div>
+
+          <div class="label">Department</div>
+          <div class="value">Customer Success</div>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <div class="section">
+          <div class="label">About Me</div>
+          <div class="value">
+            As a Solutions Engineer, I am the technical expert who bridges the gap between a client's business challenges and a company's product capabilities. I work alongside the sales team, crafting and presenting tailored solutions that demonstrate how our technology can deliver real business value. My goal is to be a trusted advisor, building confidence and fostering a clear vision of success for every customer.
+        </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

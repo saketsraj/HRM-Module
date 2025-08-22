@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+  <body>
+    <header class="navbar">
+      <h2 class="logo">Employee Dashboard</h2>
+      <div class="user-menu">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+          alt="User Avatar"
+          class="user-avatar"
+          id="userAvatar"
+        />
+        <div class="dropdown" id="dropdownMenu">
+          <a href="../login-page.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <div class="card" onclick="navigateTo('about.html')">
+        <i class="fas fa-user-tie"></i>
+        <h3>About</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('leaves.html')">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Leave Requests</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('attendance.html')">
+        <i class="fas fa-clipboard-check"></i>
+        <h3>Attendance</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('policies-benefits.html')">
+        <i class="fas fa-handshake"></i>
+        <h3>Benefits & Policies</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('payslip.html')">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <h3>Payslips</h3>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; All rights reserved</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+  </body>
+</html>

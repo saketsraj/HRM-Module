@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HRM • Weekly Attendance</title>
+  <link rel="stylesheet" href="../styles/attendance.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+    <nav class="navbar">
+  <div class="nav-left">
+    <ul class="nav-links">
+      <li><a href="./dashboard.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./attendance.html">Attendance</a></li>
+      <li><a href="./leaves.html">Leaves</a></li>
+      <li><a href="./payslip.html">Payslips</a></li>
+      <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
+    </ul>
+  </div>
+      <div class="nav-right">
+        <div class="user-menu">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div class="dropdown" id="dropdownMenu">
+            <a href="../login-page.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <div class="toolbar">
+      <div class="title">Weekly Attendance</div>
+      <input type="text" id="empId" value="EMP-1024" title="Employee ID" />
+      <input type="text" id="empName" value="Rahul Agarwal" title="Name" />
+      <input type="week" id="weekPicker" />
+      <select id="weekStart">
+        <option value="1">Week starts: Monday</option>
+        <option value="0">Week starts: Sunday</option>
+      </select>
+    </div>
+
+    <div class="card" id="rows"></div>
+    <div class="pill" id="summary">Status</div>
+  </div>
+
+<script src="../scripts/attendance.js"></script>
+</body>
+</html>
