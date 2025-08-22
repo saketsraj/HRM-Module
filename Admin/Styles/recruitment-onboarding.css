@@ -76,6 +76,11 @@ body {
   min-width: 130px;
   text-align: center;
   overflow: hidden;
+  z-index: 1000; /* keep it on top */
+}
+
+.dropdown.show {
+  display: block;
 }
 
 .dropdown a {
