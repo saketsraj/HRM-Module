@@ -268,3 +268,11 @@ body {
   gap: 10px;
   flex-wrap: wrap;
 }
+
+.dropdown {
+  display: none;
+}
+
+.dropdown.show {
+  display: block;
+}

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HRM • Benefits & Policies</title>
-  <link rel="stylesheet" href="../styles/policies-benefits.css" />
-</head>
-<body>
-  <nav class="navbar">
-  <div class="nav-left">
-    <ul class="nav-links">
-      <li><a href="./dashboard.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./attendance.html">Attendance</a></li>
-      <li><a href="./leaves.html">Leaves</a></li>
-      <li><a href="./payslip.html">Payslips</a></li>
-      <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
-    </ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HRM • Benefits & Policies</title>
+    <link rel="stylesheet" href="../styles/policies-benefits.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="./dashboard.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./leaves.html">Leaves</a></li>
+          <li><a href="./payslip.html">Payslips</a></li>
+          <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
+        </ul>
+      </div>
       <div class="nav-right">
         <div class="user-menu">
           <img
@@ -26,33 +26,37 @@
             class="user-avatar"
           />
           <div class="dropdown" id="dropdownMenu">
-            <a href="../login-page.html">Logout</a>
+            <a href="/login-page.html">Logout</a>
           </div>
         </div>
       </div>
     </nav>
-  <div class="container">
-    <div class="toolbar">
-      <div class="title">Benefits & Policies</div>
-      <input id="search" placeholder="Search title, tags…" />
-      <span class="pill" id="count">0 items</span>
+    <div class="container">
+      <div class="toolbar">
+        <div class="title">Benefits & Policies</div>
+        <input id="search" placeholder="Search title, tags…" />
+        <span class="pill" id="count">0 items</span>
+      </div>
+
+      <div class="grid">
+        <!-- Benefits Folder -->
+        <section class="folder" id="benefitsFolder">
+          <h3>
+            Company Benefits <span class="meta" id="benefitsCount"></span>
+          </h3>
+          <div class="list" id="benefitsList"></div>
+        </section>
+
+        <!-- Policies Folder -->
+        <section class="folder" id="policiesFolder">
+          <h3>
+            Company Policies <span class="meta" id="policiesCount"></span>
+          </h3>
+          <div class="list" id="policiesList"></div>
+        </section>
+      </div>
     </div>
 
-    <div class="grid">
-      <!-- Benefits Folder -->
-      <section class="folder" id="benefitsFolder">
-        <h3>Company Benefits <span class="meta" id="benefitsCount"></span></h3>
-        <div class="list" id="benefitsList"></div>
-      </section>
-
-      <!-- Policies Folder -->
-      <section class="folder" id="policiesFolder">
-        <h3>Company Policies <span class="meta" id="policiesCount"></span></h3>
-        <div class="list" id="policiesList"></div>
-      </section>
-    </div>
-  </div>
-
-<script src="../scripts/policies-benefits.js"></script>
-</body>
+    <script src="../scripts/policies-benefits.js"></script>
+  </body>
 </html>

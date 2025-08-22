@@ -27,7 +27,7 @@
             class="user-avatar"
           />
           <div class="dropdown" id="dropdownMenu">
-            <a href="../login-page.html">Logout</a>
+            <a href="/login-page.html">Logout</a>
           </div>
         </div>
       </div>
@@ -81,5 +81,23 @@
       </section>
     </div>
   </div>
+  <script>
+  // toggle dropdown on click
+  document.addEventListener("DOMContentLoaded", () => {
+    const userMenu = document.querySelector(".user-menu");
+    const dropdown = document.getElementById("dropdownMenu");
+
+    userMenu.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent body click from closing immediately
+      dropdown.classList.toggle("show");
+    });
+
+    // close dropdown if clicking outside
+    document.addEventListener("click", () => {
+      dropdown.classList.remove("show");
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HRM • Payslip</title>
-  <link rel="stylesheet" href="../styles/payslip.css" />
-</head>
-<body>
-  <nav class="navbar">
-  <div class="nav-left">
-    <ul class="nav-links">
-      <li><a href="./dashboard.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./attendance.html">Attendance</a></li>
-      <li><a href="./leaves.html">Leaves</a></li>
-      <li><a href="./payslip.html">Payslips</a></li>
-      <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
-    </ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HRM • Payslip</title>
+    <link rel="stylesheet" href="../styles/payslip.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="./dashboard.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./leaves.html">Leaves</a></li>
+          <li><a href="./payslip.html">Payslips</a></li>
+          <li><a href="./policies-benefits.html">Benefits & Policies</a></li>
+        </ul>
+      </div>
       <div class="nav-right">
         <div class="user-menu">
           <img
@@ -26,68 +26,81 @@
             class="user-avatar"
           />
           <div class="dropdown" id="dropdownMenu">
-            <a href="../login-page.html">Logout</a>
+            <a href="/login-page.html">Logout</a>
           </div>
         </div>
       </div>
     </nav>
-  <div class="container">
-    <div class="topbar">
-      <div class="title">Payslips</div>
-      <span class="secure">Secure • Private</span>
-    </div>
-
-    <!-- Greeting + Controls -->
-    <div class="card">
-      <div class="greet">Welcome, Rahul</div>
-      <div class="toolbar">
-        <label for="month" class="note">Month</label>
-        <select id="month"></select>
-        <button id="printBtn" class="primary">Print / Save PDF</button>
+    <div class="container">
+      <div class="topbar">
+        <div class="title">Payslips</div>
+        <span class="secure">Secure • Private</span>
       </div>
-    </div>
 
-    <!-- Summary (Gross / Deductions / Take Home) -->
-    <div class="card">
-      <div class="summary" id="summary">
-        <div class="stat">
-          <div class="h">Gross Pay</div>
-          <div class="v" id="gross">--</div>
-        </div>
-        <div class="stat">
-          <div class="h">Total Deductions</div>
-          <div class="v" id="deductions">--</div>
-        </div>
-        <div class="stat">
-          <div class="h">Take Home</div>
-          <div class="v" id="takehome">--</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Details -->
-    <div class="grid">
+      <!-- Greeting + Controls -->
       <div class="card">
-        <h3 style="margin:0 0 8px;">Earnings</h3>
-        <table id="earningsTbl">
-          <thead><tr><th>Component</th><th class="right">Amount</th></tr></thead>
-          <tbody></tbody>
-        </table>
+        <div class="greet">Welcome, Rahul</div>
+        <div class="toolbar">
+          <label for="month" class="note">Month</label>
+          <select id="month"></select>
+          <button id="printBtn" class="primary">Print / Save PDF</button>
+        </div>
       </div>
+
+      <!-- Summary (Gross / Deductions / Take Home) -->
       <div class="card">
-        <h3 style="margin:0 0 8px;">Deductions</h3>
-        <table id="deductionsTbl">
-          <thead><tr><th>Component</th><th class="right">Amount</th></tr></thead>
-          <tbody></tbody>
-        </table>
+        <div class="summary" id="summary">
+          <div class="stat">
+            <div class="h">Gross Pay</div>
+            <div class="v" id="gross">--</div>
+          </div>
+          <div class="stat">
+            <div class="h">Total Deductions</div>
+            <div class="v" id="deductions">--</div>
+          </div>
+          <div class="stat">
+            <div class="h">Take Home</div>
+            <div class="v" id="takehome">--</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin: 0 0 8px">Earnings</h3>
+          <table id="earningsTbl">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th class="right">Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3 style="margin: 0 0 8px">Deductions</h3>
+          <table id="deductionsTbl">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th class="right">Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="note" id="meta">
+          Payslip for <span id="metaMonth">—</span> • Employee ID:
+          <span id="empIdView">EMP-1024</span> • Department: Customer Success
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="note" id="meta">Payslip for <span id="metaMonth">—</span> • Employee ID: <span id="empIdView">EMP-1024</span> • Department: Customer Success</div>
-    </div>
-  </div>
-
-<script src="../scripts/payslip.js"></script>
-</body>
+    <script src="../scripts/payslip.js"></script>
+  </body>
 </html>
