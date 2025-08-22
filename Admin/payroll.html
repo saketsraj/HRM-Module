@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payroll</title>
+    <link rel="stylesheet" href="./Styles/payroll.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="./dashboard.html">Home</a></li>
+          <li>
+            <a href="./employee-record.html" class="active">Employees Record</a>
+          </li>
+          <li>
+            <a href="./recruitment-onboarding.html">Recruitment & Onboarding</a>
+          </li>
+          <li>
+            <a href="./attendance-approvals.html">Attendance/Approvals</a>
+          </li>
+          <li><a href="./cases-queries.html">Cases & Queries</a></li>
+          <li>
+            <a href="./benefits-company-policies.html">Benefits & Policies</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="user-menu">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div class="dropdown" id="dropdownMenu">
+            <a href="../login-page.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="payrollContainer">
+      <div id="payrollCard">
+        <header class="header">
+          <button id="runPayrollBtn" class="btn-primary">Run Payroll</button>
+          <div class="payroll-period">July 2 - August 1, 2025</div>
+        </header>
+
+        <section class="confirmation">
+          <p>
+            Confirm <strong>$28,976.77</strong> withdrawal and submit payroll
+          </p>
+        </section>
+
+        <section class="payroll-summary">
+          <div class="summary-row">
+            <span>Total Payroll</span>
+            <span class="amount">$31,517.13</span>
+          </div>
+          <div class="summary-row">
+            <span>Withdrawal Amount</span>
+            <span class="amount withdrawal-amount">($28,976.77)</span>
+          </div>
+          <div class="summary-row">
+            <span>Withdrawal Date</span>
+            <span>Fri Aug 2, 2025</span>
+          </div>
+          <div class="summary-row">
+            <span>Employee Payday</span>
+            <span>Mon Aug 5, 2025</span>
+          </div>
+        </section>
+
+        <section class="info-sections">
+          <details open>
+            <summary>Tax Breakdown</summary>
+            <div class="section-content">
+              <ul>
+                <li>Federal Tax: $6,153.25</li>
+                <li>State Tax: $2,017.10</li>
+                <li>Social Security: $1,950.00</li>
+                <li>Medicare: $445.78</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>What the Team Takes Home</summary>
+            <div class="section-content">
+              <ul>
+                <li>Gross Pay: $31,517.13</li>
+                <li>Deductions: $10,566.13</li>
+                <li>Net Pay: $20,951.00</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Company Costs</summary>
+            <div class="section-content">
+              <ul>
+                <li>Employer Social Security: $1,950.00</li>
+                <li>Employer Medicare: $445.78</li>
+                <li>Other Benefits: $3,500.00</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+      </div>
+      <div id="processingMessage" style="display: none">
+        <div class="processing-card">
+          <h2>🎉 Congratulations!</h2>
+          <p>
+            Payroll for July 2 – August 1 is now <b>processing</b>.<br />
+            Withdrawal of <strong>$28,976.77</strong> scheduled for
+            <b>Fri Aug 2, 2025</b>.<br />
+            Employees will be paid on <b>Mon Aug 5, 2025</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Scripts/payroll.js"></script>
+  </body>
+</html>

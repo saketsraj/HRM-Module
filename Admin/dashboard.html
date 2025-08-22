@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./Styles/dashboard.css" />
+    <!-- FontAwesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <h2 class="logo">Admin Dashboard</h2>
+      <div class="user-menu">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+          alt="User Avatar"
+          class="user-avatar"
+          id="userAvatar"
+        />
+        <div class="dropdown" id="dropdownMenu">
+          <a href="../login-page.html">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <div class="card" onclick="navigateTo('employee-record.html')">
+        <i class="fas fa-users"></i>
+        <h3>Employees Record</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('recruitment-onboarding.html')">
+        <i class="fas fa-user-plus"></i>
+        <h3>Recruitment & Onboarding</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('payroll.html')">
+        <i class="fas fa-money-check-alt"></i>
+        <h3>Payroll</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('attendance-approvals.html')">
+        <i class="fas fa-calendar-check"></i>
+        <h3>Attendance / Approvals</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('cases-queries.html')">
+        <i class="fas fa-comments"></i>
+        <h3>Cases & Queries</h3>
+      </div>
+
+      <div class="card" onclick="navigateTo('benefits-company-policies.html')">
+        <i class="fas fa-briefcase"></i>
+        <h3>Benefits & Policies</h3>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 HR Admin Dashboard | All Rights Reserved</p>
+    </footer>
+
+    <script src="./Scripts/dashboard.js"></script>
+  </body>
+</html>

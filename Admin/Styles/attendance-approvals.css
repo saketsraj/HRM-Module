@@ -1,0 +1,247 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  padding-top: 80px; /* space for navbar */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 130px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+  color: #2575fc;
+}
+
+.show {
+  display: block;
+}
+
+/* Page Header */
+.page-header {
+  margin: 30px 40px 20px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Section Cards */
+.attendance,
+.leaves {
+  margin: 20px 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.attendance h2,
+.leaves h2 {
+  margin-bottom: 18px;
+  color: #2575fc;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Weekly Calendar */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-table th,
+.calendar-table td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.calendar-table th {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-table td.present {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.calendar-table td.absent {
+  color: #d62828;
+  font-weight: 600;
+}
+
+/* Today's Attendance Table */
+.attendance table:not(.calendar-table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.attendance th,
+.attendance td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.attendance th {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: 600;
+}
+
+/* Leave Requests */
+.leaves {
+  max-width: 650px;
+}
+
+.leave-card {
+  background: #f9fbff;
+  border: 1px dashed #6a11cb;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.leave-card p {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.leave-card button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.leave-card button:first-of-type {
+  background: linear-gradient(135deg, #27ae60, #219150);
+  color: white;
+}
+
+.leave-card button:first-of-type:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.leave-card button:last-of-type {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.leave-card button:last-of-type:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

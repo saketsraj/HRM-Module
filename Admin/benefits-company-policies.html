@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Admin • Benefits & Policies</title>
+    <link rel="stylesheet" href="./Styles/benefits-policies.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="./dashboard.html">Home</a></li>
+          <li><a href="./employee-record.html">Eemployees Record</a></li>
+          <li>
+            <a href="./recruitment-onboarding.html">Recruitment & Onboarding</a>
+          </li>
+          <li><a href="./payroll.html">Payroll</a></li>
+          <li>
+            <a href="./attendance-approvals.html">Attendance/Approvals</a>
+          </li>
+          <li><a href="./cases-queries.html">Cases & Queries</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="user-menu">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div class="dropdown" id="dropdownMenu">
+            <a href="../login-page.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="toolbar">
+        <div class="title">Benefits & Policies (HR Admin)</div>
+        <input
+          id="search"
+          placeholder="Search title, tags…"
+          autocomplete="off"
+        />
+        <span class="pill" id="count">0 items</span>
+        <button class="btn" id="addBenefit">+ Add Benefit</button>
+        <button class="btn" id="addPolicy">+ Add Policy</button>
+      </div>
+
+      <div class="grid">
+        <!-- Benefits Folder -->
+        <section class="folder" id="benefitsFolder">
+          <h3>
+            Company Benefits <span class="meta" id="benefitsCount"></span>
+          </h3>
+          <div class="list" id="benefitsList"></div>
+        </section>
+
+        <!-- Policies Folder -->
+        <section class="folder" id="policiesFolder">
+          <h3>
+            Company Policies <span class="meta" id="policiesCount"></span>
+          </h3>
+          <div class="list" id="policiesList"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Add</h2>
+        <form id="editForm">
+          <input type="hidden" id="recordType" />
+          <input type="hidden" id="recordId" />
+          <input
+            id="titleInput"
+            placeholder="Title"
+            required
+            autocomplete="off"
+          />
+          <textarea id="descInput" placeholder="Description"></textarea>
+          <input
+            id="tagsInput"
+            placeholder="Tags (comma-separated)"
+            autocomplete="off"
+          />
+          <input
+            id="linkInput"
+            placeholder="Link (optional)"
+            autocomplete="off"
+          />
+          <input type="date" id="dateInput" required />
+          <div class="modal-actions">
+            <button type="submit" class="save-btn">Save</button>
+            <button type="button" class="cancel-btn" id="cancelBtn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./Scripts/benefits-policies.js"></script>
+  </body>
+</html>

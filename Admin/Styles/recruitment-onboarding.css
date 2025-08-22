@@ -1,0 +1,188 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  padding-top: 80px; /* space for navbar */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 130px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+  color: #2575fc;
+}
+
+/* Page Container */
+.container {
+  max-width: 950px;
+  margin: 100px auto 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Steps Buttons */
+.steps {
+  margin: 20px 0;
+}
+
+.steps button {
+  margin: 10px;
+  padding: 12px 22px;
+  border: none;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.steps button:hover {
+  transform: scale(1.07);
+  opacity: 0.9;
+}
+
+/* Stage Box */
+.stage-box {
+  margin-top: 25px;
+  padding: 25px;
+  border: 2px dashed #2575fc;
+  border-radius: 10px;
+  background: #f9fbff;
+  text-align: left;
+  font-size: 16px;
+}
+
+.stage-box h3 {
+  color: #2575fc;
+  margin-bottom: 15px;
+}
+
+.stage-box textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 15px;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.stage-box textarea:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.3);
+}
+
+/* Stage Box Buttons */
+.stage-box button {
+  margin-top: 12px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stage-box button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

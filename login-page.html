@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+    <style>
+      /* Background styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4b0d8e, #14418f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Login container */
+      .login-box {
+        background: white;
+        padding: 30px 35px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        width: 360px; /* slightly wider */
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .sub-text {
+        color: gray;
+        margin-bottom: 15px;
+      }
+
+      /* Role selection buttons container */
+      .role-btn-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      /* Role selection buttons */
+      .role-btn {
+        flex: 1;
+        padding: 14px 0;
+        border-radius: 10px;
+        border: none;
+        background: #6a11cb;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.15s;
+        user-select: none;
+      }
+
+      .role-btn:hover {
+        background: #2575fc;
+        transform: scale(1.05);
+      }
+
+      /* Highlight selected role */
+      .role-btn.active {
+        background: #2575fc;
+        box-shadow: 0 0 10px rgba(37, 117, 252, 0.6);
+      }
+
+      /* Input fields */
+      input {
+        width: 100%;
+        padding: 14px 12px;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        box-sizing: border-box;
+      }
+
+      input:focus {
+        border-color: #2575fc;
+        box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+        outline: none;
+      }
+
+      /* Login button */
+      .login-btn {
+        width: 100%;
+        padding: 14px 0;
+        margin-top: 15px;
+        border-radius: 10px;
+        border: none;
+        background: #2575fc;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.15s;
+        user-select: none;
+      }
+
+      .login-btn:hover {
+        background: #6a11cb;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Welcome Back !</h2>
+      <p class="sub-text">Please select your account type</p>
+
+      <!-- Buttons side-by-side -->
+      <div class="role-btn-container">
+        <button
+          type="button"
+          class="role-btn"
+          id="adminBtn"
+          onclick="setRole('admin')"
+        >
+          Admin
+        </button>
+        <button
+          type="button"
+          class="role-btn"
+          id="employeeBtn"
+          onclick="setRole('employee')"
+        >
+          Employee
+        </button>
+      </div>
+
+      <form id="loginForm" onsubmit="return loginUser(event)">
+        <input
+          type="text"
+          id="userid"
+          placeholder="Enter User ID"
+          required
+          autocomplete="username"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          required
+          autocomplete="current-password"
+        />
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+
+    <script>
+      let selectedRole = null;
+
+      function setRole(role) {
+        selectedRole = role;
+
+        // Remove highlight from both buttons
+        document.getElementById("adminBtn").classList.remove("active");
+        document.getElementById("employeeBtn").classList.remove("active");
+
+        // Add highlight to selected role
+        if (role === "admin") {
+          document.getElementById("adminBtn").classList.add("active");
+        } else {
+          document.getElementById("employeeBtn").classList.add("active");
+        }
+      }
+
+      function loginUser(event) {
+        event.preventDefault();
+        const id = document.getElementById("userid").value.trim();
+        const pass = document.getElementById("password").value.trim();
+
+        if (!selectedRole) {
+          alert("⚠ Please select Admin or Employee first!");
+          return false;
+        }
+
+        if (selectedRole === "admin" && id === "admin" && pass === "admin") {
+          window.location.href = "./Admin/dashboard.html";
+        } else if (
+          selectedRole === "employee" &&
+          id === "employee" &&
+          pass === "employee"
+        ) {
+          window.location.href = "./Employee/dashboard.html";
+        } else {
+          alert("❌ Invalid credentials!");
+        }
+      }
+    </script>
+  </body>
+</html>

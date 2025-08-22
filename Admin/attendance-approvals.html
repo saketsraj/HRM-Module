@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attendance/Approvals</title>
+    <link rel="stylesheet" href="./Styles/attendance-approvals.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="./dashboard.html">Home</a></li>
+          <li><a href="./employee-record.html">Employees Record</a></li>
+          <li>
+            <a href="./recruitment-onboarding.html">Recruitment & Onboarding</a>
+          </li>
+          <li><a href="./payroll.html">Payroll</a></li>
+          <li><a href="./cases-queries.html">Cases & Queries</a></li>
+          <li>
+            <a href="./benefits-company-policies.html">Benefits & Policies</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="user-menu">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div class="dropdown" id="dropdownMenu">
+            <a href="../login-page.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="page-header">
+        <h1>Attendance & Approvals</h1>
+      </header>
+
+      <!-- Weekly Calendar Attendance Table -->
+      <section class="attendance">
+        <h2>Weekly Attendance Calendar (2PM - 11PM)</h2>
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>Employee</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Esha Chinthala</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+            </tr>
+            <tr>
+              <td>Prem Rajput</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+            </tr>
+            <tr>
+              <td>Tarun Sharma</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+            </tr>
+            <tr>
+              <td>Uttarkar Sai Nath Rao</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+            </tr>
+            <tr>
+              <td>Harsh Sharma</td>
+              <td class="absent">-</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="present">✓</td>
+              <td class="absent">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Today's Attendance Table -->
+      <section class="attendance">
+        <h2>Today's Attendance (2PM - 11PM)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Employee</th>
+              <th>Check-In</th>
+              <th>Check-Out</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Esha Chinthala</td>
+              <td>2:05 PM</td>
+              <td>11:00 PM</td>
+            </tr>
+            <tr>
+              <td>Prem Rajput</td>
+              <td>2:10 PM</td>
+              <td>11:05 PM</td>
+            </tr>
+            <tr>
+              <td>Tarun Sharma</td>
+              <td>2:00 PM</td>
+              <td>10:55 PM</td>
+            </tr>
+            <tr>
+              <td>Uttarkar Sai Nath Rao</td>
+              <td>2:07 PM</td>
+              <td>11:10 PM</td>
+            </tr>
+            <tr>
+              <td>Harsh Sharma</td>
+              <td>2:12 PM</td>
+              <td>11:15 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Leave Requests -->
+      <section class="leaves">
+        <h2>Leave Requests</h2>
+        <div class="leave-card">
+          <p><b>Employee:</b> Esha Chinthala</p>
+          <p><b>Reason:</b> Personal Work</p>
+          <p><b>Date:</b> 19 Aug 2025</p>
+          <button onclick="handleLeave(this, 'Approved')">✅ Approve</button>
+          <button onclick="handleLeave(this, 'Rejected')">❌ Reject</button>
+        </div>
+        <div class="leave-card">
+          <p><b>Employee:</b> Tarun Sharma</p>
+          <p><b>Reason:</b> Family Function</p>
+          <p><b>Date:</b> 21 Aug 2025</p>
+          <button onclick="handleLeave(this, 'Approved')">✅ Approve</button>
+          <button onclick="handleLeave(this, 'Rejected')">❌ Reject</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./Scripts/attendance-approvals.js"></script>
+  </body>
+</html>
