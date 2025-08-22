@@ -1,0 +1,249 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  padding-top: 90px; /* space for navbar */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 130px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+  color: #2575fc;
+}
+
+.show {
+  display: block;
+}
+
+/* Container & Card */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+#payrollCard {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.payroll-period {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2575fc;
+  text-align: right;
+}
+
+.confirmation {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: #444;
+}
+
+/* Payroll Summary */
+.payroll-summary {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: 700;
+  color: #2575fc;
+}
+
+.withdrawal-amount {
+  color: #d62828;
+}
+
+/* Info Sections */
+.info-sections details {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: #f6faff;
+  transition: background-color 0.3s;
+}
+
+.info-sections details[open] {
+  background-color: #f1f5ff;
+  border-color: #c8e3fc;
+}
+
+.section-content {
+  margin-top: 10px;
+  padding-left: 12px;
+}
+
+.section-content ul {
+  list-style: disc inside;
+  color: #555;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.section-content li {
+  padding: 5px 0;
+}
+
+/* Processing Message */
+#processingMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+
+.processing-card {
+  background: #e7f7e2;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.07);
+  padding: 40px 24px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.processing-card h2 {
+  color: #1e8239;
+  font-size: 2em;
+  margin-bottom: 18px;
+}
+
+.processing-card p {
+  color: #34463b;
+  font-size: 1.16em;
+  line-height: 1.7;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
