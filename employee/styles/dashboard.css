@@ -1,32 +1,27 @@
-/* Reset & base */
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background:#f0f2f5; color:#0f172a; min-height:100vh; display:flex; flex-direction:column;
+  background:#f0f2f5; color:rgba(1, 1, 82, 1); min-height:100vh; display:flex; flex-direction:column;
 }
 
-/* Header */
 .navbar{
-  background:#0f172a; color:#fff;
+  background:rgba(1, 1, 82, 1); color:#fff;
   height:64px; display:flex; align-items:center; justify-content:space-between;
   padding:0 30px;
 }
 .logo{ font-size:20px; font-weight:800; }
 
-/* Avatar dropdown */
 .user-menu{ position:relative; cursor:pointer; }
 .user-avatar{ width:44px; height:44px; border-radius:50%; border:2px solid #fff; object-fit:cover; }
 .dropdown{
   display:none; position:absolute; right:0; top:54px; min-width:160px;
   background:#fff; border-radius:8px; box-shadow:0 8px 24px black;
 }
-.dropdown a{ display:block; padding:12px 16px; color:#0f172a; text-decoration:none; }
+.dropdown a{ display:block; padding:12px 16px; color:rgba(1, 1, 82, 1); text-decoration:none; }
 .dropdown a:hover{ background:#f5f5f5; }
 
-/* -------- DASHBOARD LAYOUT (3 + centered 2) -------- */
 .dashboard{
-  /* keep everything visible on first screen for common laptop heights */
-  min-height: calc(100vh - 64px - 60px); /* viewport - header - footer */
+  min-height: calc(100vh - 64px - 60px); 
   padding: 36px 24px;
   width: 100%;
   max-width: 1200px;
@@ -39,11 +34,9 @@ body {
   align-content: start;
 }
 
-/* Force the last two to center under the first row */
 .dashboard .card:nth-child(4){ grid-column: 1; }
 .dashboard .card:nth-child(5){ grid-column: 2; }
 
-/* Card */
 .card{
   background:#fff; border-radius:16px; box-shadow:0 8px 22px rgb(159, 159, 173);
   display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
@@ -51,23 +44,22 @@ body {
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
 }
 
-/* BIG icons — works for FA <i> and SVG */
 .card i,
 .card .fa-solid, .card .fas,
 .card svg {
-  font-size: 84px;        /* for <i> glyph-based */
-  width: 84px; height:84px; /* for SVG-based */
+  font-size: 84px;      
+  width: 84px; height:84px; 
   line-height: 1;
   margin-bottom: 14px;
-  color:#0f172a;
+  color:rgb(51, 51, 141);
 }
 
-.card h3{ font-size:20px; font-weight:800; color:#0f172a; }
+.card h3{ font-size:20px; font-weight:800; color:rgba(1, 1, 82, 1); }
 
 .card:hover{
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px black; /* keep shadow black */
-  background: linear-gradient(135deg, #0f172a, #2563eb); /* #0f172a gradient */
+  box-shadow: 0 16px 32px black;
+  background: linear-gradient(135deg, rgba(1, 1, 82, 1), #2563eb); 
   color:#fff;
 }
 .card:hover i,
@@ -75,25 +67,21 @@ body {
 .card:hover svg { color:#fff; }
 .card:hover h3{ color:#fff; }
 
-/* Footer */
 .footer{
   height:60px; background:#f1f1f1; display:flex; align-items:center; justify-content:center;
-  color:#0f172a; font-size:14px; margin-top:auto;
+  color:rgba(1, 1, 82, 1); font-size:14px; margin-top:auto;
 }
 
-/* --------- Responsive breakpoints --------- */
-/* Tablets: allow 2 per row naturally */
+
 @media (max-width: 992px){
   .dashboard{
     grid-template-columns: repeat(2, minmax(240px, 1fr));
-    min-height: auto; /* let it grow on smaller screens */
+    min-height: auto; 
   }
-  /* remove manual centering when 2 columns */
   .dashboard .card:nth-child(4),
   .dashboard .card:nth-child(5){ grid-column: auto; }
 }
 
-/* Phones: single column */
 @media (max-width: 560px){
   .dashboard{
     grid-template-columns: 1fr;

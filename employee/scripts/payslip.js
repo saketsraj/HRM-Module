@@ -1,5 +1,4 @@
 (function () {
-  // Mock payslip data (replace with API later)
   const payslips = {
     "2025-08": {
       earnings: [
@@ -61,7 +60,6 @@
   }
 
   function populateMonths() {
-    // Combine mock keys + last 6 months for demo
     const keys = new Set(Object.keys(payslips));
     const now = new Date();
     for (let i = 0; i < 6; i++) {
@@ -84,7 +82,6 @@
     const data = payslips[key];
     metaMonth.textContent = monthLabel(key);
 
-    // Clear tables
     earnBody.innerHTML = "";
     dedBody.innerHTML = "";
 
@@ -118,7 +115,6 @@
   monthSel.addEventListener("change", render);
   printBtn.addEventListener("click", () => window.print());
 
-  // init
   populateMonths();
   render();
 })();
@@ -127,11 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("dropdownMenu");
 
   userMenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent body click from closing immediately
+    e.stopPropagation();
     dropdown.classList.toggle("show");
   });
 
-  // close dropdown if clicking outside
   document.addEventListener("click", () => {
     dropdown.classList.remove("show");
   });

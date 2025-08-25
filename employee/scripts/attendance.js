@@ -18,7 +18,6 @@
   }
 
   function startOfWeek(date, weekStart = 1) {
-    // 0 Sun, 1 Mon
     const d = new Date(date);
     const day = d.getDay();
     const diff = day < weekStart ? 7 - (weekStart - day) : day - weekStart;
@@ -120,7 +119,6 @@
           <div class="sub">Hrs worked</div>
         </div>`;
 
-      // listeners
       row.querySelector(".in").addEventListener("change", (e) => {
         const d = load();
         d[k] = d[k] || { in: "", out: "", notes: "" };
@@ -144,14 +142,12 @@
     )}`;
   }
 
-  // init week picker to current week
   function initWeekPicker() {
     const now = new Date();
     const week = getWeekString(now);
     weekPicker.value = week;
   }
   function getWeekString(date) {
-    // YYYY-Www per HTML spec (ISO week, starts Monday)
     const d = new Date(
       Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
     );
@@ -162,7 +158,6 @@
     return `${d.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`;
   }
   function dateFromWeekString(str) {
-    // returns a date roughly in that ISO week; we'll then compute startOfWeek based on setting
     const [y, w] = str.split("-W");
     const simple = new Date(
       Date.UTC(parseInt(y), 0, 1 + (parseInt(w) - 1) * 7)
@@ -192,17 +187,15 @@
   buildWeek(new Date());
 })();
 
-// toggle dropdown on click
 document.addEventListener("DOMContentLoaded", () => {
   const userMenu = document.querySelector(".user-menu");
   const dropdown = document.getElementById("dropdownMenu");
 
   userMenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent body click from closing immediately
+    e.stopPropagation(); 
     dropdown.classList.toggle("show");
   });
 
-  // close dropdown if clicking outside
   document.addEventListener("click", () => {
     dropdown.classList.remove("show");
   });

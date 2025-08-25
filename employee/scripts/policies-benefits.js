@@ -72,7 +72,6 @@
     totalCount.textContent = `${b.length + p.length} items`;
   }
 
-  // Seed with sample data if empty
   (function seed() {
     const data = load();
     if (data.benefits.length === 0 && data.policies.length === 0) {
@@ -124,16 +123,15 @@
   searchEl.addEventListener("input", render);
   render();
 })();
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventener("DOMContentLoaded", () => {
   const userMenu = document.querySelector(".user-menu");
   const dropdown = document.getElementById("dropdownMenu");
 
   userMenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent body click from closing immediately
+    e.stopPropagation(); 
     dropdown.classList.toggle("show");
   });
 
-  // close dropdown if clicking outside
   document.addEventListener("click", () => {
     dropdown.classList.remove("show");
   });

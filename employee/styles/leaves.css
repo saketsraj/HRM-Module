@@ -18,33 +18,18 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-/* CSS */
+
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  color: #fff;
-  isolation: isolate; /* ensures blur layer doesn't affect text */
-}
-
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 24, 39, 0.95),
-    rgba(17, 24, 39, 0.85)
-  );
+  background: rgba(17, 24, 39, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  pointer-events: none;
 }
 
 .nav-links {
@@ -64,7 +49,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #6366f1; /* Indigo hover */
+  color: #6366f1; 
 }
 
 .user-menu {
@@ -108,7 +93,7 @@ body {
 }
 
 .dropdown a:hover {
-  color: #ef4444; /* Red hover for logout */
+  color: #ef4444; 
 }
 
 .container {

@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
     <nav class="navbar">
   <div class="nav-left">
     <ul class="nav-links">
@@ -35,7 +34,6 @@
   <div class="container">
     <div class="topbar">
       <span class="badge">Employee Portal • About</span>
-      <span class="pill">
     </div>
 
     <div class="card grid" role="region" aria-label="Employee About Details">
@@ -52,10 +50,9 @@
         </div>
       </aside>
 
-      <!-- Right Column: Info -->
       <section class="about">
         <h2>About</h2>
-        <div class="info-grid" aria-describedby="about-fields">
+        <div class="info-grid">
           <div class="label">Phone</div>
           <div class="value"><a href="tel:+91-98765-43210" style="color:inherit; text-decoration:none">+91 98765 43210</a></div>
 
@@ -81,23 +78,7 @@
       </section>
     </div>
   </div>
-  <script>
-  // toggle dropdown on click
-  document.addEventListener("DOMContentLoaded", () => {
-    const userMenu = document.querySelector(".user-menu");
-    const dropdown = document.getElementById("dropdownMenu");
-
-    userMenu.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent body click from closing immediately
-      dropdown.classList.toggle("show");
-    });
-
-    // close dropdown if clicking outside
-    document.addEventListener("click", () => {
-      dropdown.classList.remove("show");
-    });
-  });
-</script>
+  <script src="../scripts/about.js"></script>
 
 </body>
 </html>

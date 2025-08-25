@@ -1,8 +1,8 @@
 :root {
-  --bg: #0f172a; /* slate-900 */
-  --muted: #94a3b8; /* slate-400 */
-  --text: #e5e7eb; /* gray-200 */
-  --border: #1f2937; /* gray-800 */
+  --bg: #0f172a; 
+  --muted: #94a3b8; 
+  --text: #e5e7eb; 
+  --border: #1f2937; 
 }
 
 * {
@@ -24,7 +24,6 @@ body {
     var(--bg);
 }
 
-/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -95,7 +94,7 @@ body {
 }
 
 .dropdown a:hover {
-  color: #ef4444; /* red for logout */
+  color: #ef4444; 
 }
 
 .container {
@@ -203,7 +202,6 @@ body {
   border-radius: 999px;
 }
 
-/* Right column */
 .about {
   padding: 16px;
   border: 1px solid var(--border);
@@ -237,18 +235,6 @@ body {
 }
 .value {
   font-size: 15px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--muted);
-  font-size: 12px;
 }
 
 .section {

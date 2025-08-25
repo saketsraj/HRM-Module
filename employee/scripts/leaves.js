@@ -18,7 +18,7 @@
     REJECTED: "Rejected",
     CANCELLED: "Cancelled",
   };
-  const TOTALS = { Annual: 12, Sick: 6, Casual: 6 }; // policy
+  const TOTALS = { Annual: 12, Sick: 6, Casual: 6 }; 
 
   function key() {
     return `leave:simple:${empIdEl.value || "UNKNOWN"}`;
@@ -34,6 +34,7 @@
   function parseYMD(ymd) {
     if (!ymd) return null;
     const [y, m, d] = ymd.split("-").map(Number);
+
     const dt = new Date();
     dt.setFullYear(y, (m || 1) - 1, d || 1);
     dt.setHours(0, 0, 0, 0);
@@ -107,7 +108,7 @@
       const total = TOTALS[type] || 0;
       const u = used[type] || 0;
       const p = pending[type] || 0;
-      const left = Math.max(0, total - u); // or (total - u - p) if you want pending to count
+      const left = Math.max(0, total - u); 
       card.querySelector('[data-role="total"]').textContent = total;
       card.querySelector('[data-role="used"]').textContent = u;
       card.querySelector('[data-role="pending"]').textContent = p;
@@ -248,11 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("dropdownMenu");
 
   userMenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent body click from closing immediately
+    e.stopPropagation(); 
     dropdown.classList.toggle("show");
   });
 
-  // close dropdown if clicking outside
   document.addEventListener("click", () => {
     dropdown.classList.remove("show");
   });

@@ -2,7 +2,6 @@ function navigateTo(page) {
   window.location.href = page;
 }
 
-// Dropdown toggle
 document.addEventListener("DOMContentLoaded", () => {
   const userAvatar = document.getElementById("userAvatar");
   const dropdown = document.getElementById("dropdownMenu");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdown.style.display === "block" ? "none" : "block";
   });
 
-  // Close dropdown if clicked outside
   document.addEventListener("click", (event) => {
     if (
       !userAvatar.contains(event.target) &&
