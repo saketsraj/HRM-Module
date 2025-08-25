@@ -1,9 +1,8 @@
-// Toggle user avatar dropdown menu
 const userAvatar = document.querySelector(".user-avatar");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
 userAvatar.addEventListener("click", (e) => {
-  e.stopPropagation(); // Prevent document click closing immediately
+  e.stopPropagation();
   dropdownMenu.classList.toggle("show");
 });
 
@@ -13,10 +12,9 @@ document.addEventListener("click", () => {
   }
 });
 
-// Function to show stages content dynamically
 function showStage(stage) {
   const box = document.getElementById("stage-box");
-  box.innerHTML = ""; // Clear existing content
+  box.innerHTML = "";
 
   switch (stage) {
     case "attracting":

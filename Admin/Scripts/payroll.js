@@ -1,4 +1,3 @@
-// User avatar dropdown
 document.querySelector(".user-avatar").addEventListener("click", () => {
   document.getElementById("dropdownMenu").classList.toggle("show");
 });
@@ -9,10 +8,8 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Run Payroll Button
 const runBtn = document.getElementById("runPayrollBtn");
 runBtn.addEventListener("click", () => {
-  // Hide payroll card, show processing message
   document.getElementById("payrollCard").style.display = "none";
   document.getElementById("processingMessage").style.display = "flex";
 });

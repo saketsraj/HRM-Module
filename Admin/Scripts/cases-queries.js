@@ -1,4 +1,3 @@
-// Dropdown toggle
 document.querySelector(".user-avatar").addEventListener("click", () => {
   document.getElementById("dropdownMenu").classList.toggle("show");
 });
@@ -10,7 +9,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Modal handling
 const caseModal = document.getElementById("caseModal");
 const registerBtn = document.getElementById("registerCaseBtn");
 const closeModal = document.getElementById("closeCaseModal");
@@ -21,7 +19,6 @@ window.onclick = (e) => {
   if (e.target === caseModal) caseModal.style.display = "none";
 };
 
-// Toggle Pending Cases Section
 const pendingSection = document.getElementById("pendingSection");
 const pendingBtn = document.getElementById("pendingCasesBtn");
 
@@ -36,7 +33,6 @@ pendingBtn.addEventListener("click", () => {
   }
 });
 
-// Case Submission
 document.getElementById("caseForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.getElementById("caseTitle").value;
@@ -55,17 +51,14 @@ document.getElementById("caseForm").addEventListener("submit", (e) => {
   `;
   document.getElementById("pendingList").appendChild(newCase);
 
-  // Reset + Close modal
   e.target.reset();
   caseModal.style.display = "none";
 
-  // Ensure Pending is visible
   pendingSection.style.display = "block";
   pendingBtn.textContent = "Hide";
   newCase.scrollIntoView({ behavior: "smooth" });
 });
 
-// Fake search
 document.getElementById("searchBtn").addEventListener("click", () => {
   let query = document.getElementById("searchBar").value;
   alert("Searching cases for: " + query);
