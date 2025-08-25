@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login Page</title>
     <style>
-      /* Background styling */
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #4b0d8e, #14418f);
@@ -16,19 +15,17 @@
         margin: 0;
       }
 
-      /* Login container */
       .login-box {
         background: white;
         padding: 30px 35px;
         border-radius: 15px;
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-        width: 360px; /* slightly wider */
+        width: 360px;
         text-align: center;
         animation: fadeIn 1s ease-in-out;
         box-sizing: border-box;
       }
 
-      /* Animation */
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -50,7 +47,6 @@
         margin-bottom: 15px;
       }
 
-      /* Role selection buttons container */
       .role-btn-container {
         display: flex;
         gap: 20px;
@@ -58,7 +54,6 @@
         margin-bottom: 20px;
       }
 
-      /* Role selection buttons */
       .role-btn {
         flex: 1;
         padding: 14px 0;
@@ -78,13 +73,11 @@
         transform: scale(1.05);
       }
 
-      /* Highlight selected role */
       .role-btn.active {
         background: #2575fc;
         box-shadow: 0 0 10px rgba(37, 117, 252, 0.6);
       }
 
-      /* Input fields */
       input {
         width: 100%;
         padding: 14px 12px;
@@ -102,7 +95,6 @@
         outline: none;
       }
 
-      /* Login button */
       .login-btn {
         width: 100%;
         padding: 14px 0;
@@ -129,7 +121,6 @@
       <h2>Welcome Back !</h2>
       <p class="sub-text">Please select your account type</p>
 
-      <!-- Buttons side-by-side -->
       <div class="role-btn-container">
         <button
           type="button"
@@ -178,7 +169,6 @@
         document.getElementById("adminBtn").classList.remove("active");
         document.getElementById("employeeBtn").classList.remove("active");
 
-        // Add highlight to selected role
         if (role === "admin") {
           document.getElementById("adminBtn").classList.add("active");
         } else {

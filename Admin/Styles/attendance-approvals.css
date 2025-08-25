@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +7,10 @@
 
 body {
   background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
-  padding-top: 80px; /* space for navbar */
+  padding-top: 80px;
   color: #333;
 }
 
-/* Navbar */
 .navbar {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
@@ -47,7 +45,6 @@ body {
   transform: scale(1.05);
 }
 
-/* User Menu */
 .user-menu {
   position: relative;
   cursor: pointer;
@@ -96,7 +93,6 @@ body {
   display: block;
 }
 
-/* Page Header */
 .page-header {
   margin: 30px 40px 20px;
 }
@@ -107,7 +103,6 @@ body {
   color: #222;
 }
 
-/* Section Cards */
 .attendance,
 .leaves {
   margin: 20px 40px;
@@ -126,7 +121,6 @@ body {
   font-size: 1.3rem;
 }
 
-/* Weekly Calendar */
 .calendar-table {
   width: 100%;
   border-collapse: collapse;
@@ -160,7 +154,6 @@ body {
   font-weight: 600;
 }
 
-/* Today's Attendance Table */
 .attendance table:not(.calendar-table) {
   width: 100%;
   border-collapse: collapse;
@@ -184,7 +177,6 @@ body {
   font-weight: 600;
 }
 
-/* Leave Requests */
 .leaves {
   max-width: 650px;
 }
@@ -234,7 +226,6 @@ body {
   opacity: 0.9;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
