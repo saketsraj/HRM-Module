@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   color: #333;
 }
 
-/* Navbar */
 .navbar {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
@@ -45,7 +43,6 @@ body {
   transform: scale(1.05);
 }
 
-/* User Menu */
 .user-menu {
   position: relative;
   cursor: pointer;
@@ -88,7 +85,6 @@ body {
   display: block;
 }
 
-/* Page Header */
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -124,7 +120,6 @@ h1 {
   opacity: 0.9;
 }
 
-/* Cards */
 .card-container {
   display: flex;
   justify-content: center;
@@ -166,7 +161,6 @@ h1 {
   transform: scale(1.05);
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -217,7 +211,6 @@ textarea {
   background: #ccc;
 }
 
-/* Pending Cases */
 .pending-section {
   margin: 40px auto;
   width: 85%;

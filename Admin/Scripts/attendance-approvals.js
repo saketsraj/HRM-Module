@@ -1,9 +1,7 @@
-// User avatar dropdown toggle
 document.querySelector(".user-avatar").addEventListener("click", () => {
   document.getElementById("dropdownMenu").classList.toggle("show");
 });
 
-// Close dropdown clicking outside
 window.addEventListener("click", (e) => {
   if (!e.target.matches(".user-avatar")) {
     const dropdown = document.getElementById("dropdownMenu");
@@ -11,15 +9,12 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Handle Leave Approvals
 function handleLeave(button, status) {
   const card = button.parentElement;
 
-  // Extract employee name
   const employeeText = card.querySelector("p").innerText;
   const employeeName = employeeText.replace("Employee:", "").trim();
 
-  // Dummy request date
   const requestDate = "20 Aug 2025";
 
   if (status === "Approved") {
@@ -37,5 +32,4 @@ function handleLeave(button, status) {
   }
 }
 
-// Expose function globally
 window.handleLeave = handleLeave;

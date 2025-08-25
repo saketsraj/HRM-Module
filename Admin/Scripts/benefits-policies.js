@@ -1,9 +1,7 @@
-// User avatar dropdown toggle
 document.querySelector(".user-avatar").addEventListener("click", () => {
   document.getElementById("dropdownMenu").classList.toggle("show");
 });
 
-// Close dropdown when clicking outside
 window.addEventListener("click", (e) => {
   if (!e.target.matches(".user-avatar")) {
     let dropdown = document.getElementById("dropdownMenu");
@@ -106,7 +104,6 @@ window.addEventListener("click", (e) => {
       filteredBenefits.length + filteredPolicies.length
     } items`;
 
-    // Attach Edit button listeners
     document.querySelectorAll(".btn-edit").forEach((btn) => {
       btn.onclick = (e) => {
         const item = e.target.closest(".item");
@@ -114,7 +111,6 @@ window.addEventListener("click", (e) => {
       };
     });
 
-    // Attach Delete button listeners
     document.querySelectorAll(".btn-delete").forEach((btn) => {
       btn.onclick = (e) => {
         const item = e.target.closest(".item");
@@ -188,7 +184,6 @@ window.addEventListener("click", (e) => {
     render();
   };
 
-  // Seed initial data if none present
   (function seed() {
     const data = loadData();
     if (data.benefits.length === 0 && data.policies.length === 0) {
@@ -237,7 +232,6 @@ window.addEventListener("click", (e) => {
     }
   })();
 
-  // Add listeners
   searchEl.addEventListener("input", render);
   document.getElementById("addBenefit").onclick = () => openModal("benefits");
   document.getElementById("addPolicy").onclick = () => openModal("policies");
@@ -246,6 +240,5 @@ window.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   };
 
-  // Initial render
   render();
 })();

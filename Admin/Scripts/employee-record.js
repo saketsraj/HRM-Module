@@ -89,7 +89,6 @@ let employees = [
   },
 ];
 
-// Render employee rows
 function renderTable() {
   employeeTable.innerHTML = "";
   employees.forEach((emp, index) => {
@@ -108,23 +107,19 @@ function renderTable() {
   });
 }
 
-// Remove employee
 function removeEmployee(index) {
   employees.splice(index, 1);
   renderTable();
 }
 
-// Open modal
 addEmployeeBtn.addEventListener("click", () => {
   modal.style.display = "flex";
 });
 
-// Close modal
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// Add new employee
 employeeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const newEmployee = {
@@ -141,11 +136,9 @@ employeeForm.addEventListener("submit", (e) => {
   modal.style.display = "none";
 });
 
-// Toggle user dropdown
 userAvatar.addEventListener("click", () => {
   dropdownMenu.style.display =
     dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
-// Initial render
 renderTable();
