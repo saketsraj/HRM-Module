@@ -182,7 +182,6 @@
   weekStartSel.addEventListener("change", () =>
     buildWeek(dateFromWeekString(weekPicker.value))
   );
-
   initWeekPicker();
   buildWeek(new Date());
 })();
